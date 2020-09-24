@@ -9,7 +9,7 @@ import QuantConnect
 import datetime
 
 
-class TradeBar(QuantConnect.Data.BaseData, QuantConnect.Data.Market.IBar, QuantConnect.Data.Market.IBaseDataBar, QuantConnect.Data.IBaseData):
+class TradeBar(QuantConnect.Data.BaseData, QuantConnect.Data.IBaseData, QuantConnect.Data.Market.IBar, QuantConnect.Data.Market.IBaseDataBar):
     """
     TradeBar class for second and minute resolution data:
                 An OHLC implementation of the QuantConnect BaseData class with parameters for candles.

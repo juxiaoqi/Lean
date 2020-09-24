@@ -57,6 +57,10 @@ class Extensions(System.object):
         pass
 
     @staticmethod
+    def Adjust(data: QuantConnect.Data.BaseData, scale: float) -> QuantConnect.Data.BaseData:
+        pass
+
+    @staticmethod
     def Batch(resultPackets: typing.List[QuantConnect.Packets.AlphaResultPacket]) -> QuantConnect.Packets.AlphaResultPacket:
         pass
 
@@ -163,6 +167,10 @@ class Extensions(System.object):
         pass
 
     @staticmethod
+    def GetNormalizedPrice(config: QuantConnect.Data.SubscriptionDataConfig, price: float) -> float:
+        pass
+
+    @staticmethod
     def GetPythonMethod(instance: Python.Runtime.PyObject, name: str) -> object:
         pass
 
@@ -220,7 +228,16 @@ class Extensions(System.object):
         pass
 
     @staticmethod
+    @typing.overload
     def Normalize(input: float) -> float:
+        pass
+
+    @staticmethod
+    @typing.overload
+    def Normalize(data: QuantConnect.Data.BaseData, config: QuantConnect.Data.SubscriptionDataConfig) -> QuantConnect.Data.BaseData:
+        pass
+
+    def Normalize(self, *args) -> QuantConnect.Data.BaseData:
         pass
 
     @staticmethod
@@ -305,6 +322,10 @@ class Extensions(System.object):
 
     @staticmethod
     def SafeDecimalCast(input: float) -> float:
+        pass
+
+    @staticmethod
+    def Scale(data: QuantConnect.Data.BaseData, factor: typing.Callable[[float], float]) -> QuantConnect.Data.BaseData:
         pass
 
     @staticmethod

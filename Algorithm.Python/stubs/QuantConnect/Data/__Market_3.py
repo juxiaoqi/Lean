@@ -33,7 +33,7 @@ class QuoteBars(QuantConnect.Data.Market.DataDictionary[QuoteBar], System.Collec
     Item: indexer#
 
 
-class RenkoBar(QuantConnect.Data.BaseData, QuantConnect.Data.Market.IBar, QuantConnect.Data.Market.IBaseDataBar, QuantConnect.Data.IBaseData):
+class RenkoBar(QuantConnect.Data.BaseData, QuantConnect.Data.IBaseData, QuantConnect.Data.Market.IBar, QuantConnect.Data.Market.IBaseDataBar):
     """
     Represents a bar sectioned not by time, but by some amount of movement in a value (for example, Closing price moving in $10 bar sizes)
     

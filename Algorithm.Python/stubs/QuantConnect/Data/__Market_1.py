@@ -10,7 +10,7 @@ import QuantConnect
 import datetime
 
 
-class FuturesChain(QuantConnect.Data.BaseData, System.Collections.IEnumerable, System.Collections.Generic.IEnumerable[FuturesContract], QuantConnect.Data.IBaseData):
+class FuturesChain(QuantConnect.Data.BaseData, QuantConnect.Data.IBaseData, System.Collections.IEnumerable, System.Collections.Generic.IEnumerable[FuturesContract]):
     """
     Represents an entire chain of futures contracts for a single underlying
                 This type is System.Collections.Generic.IEnumerable
@@ -213,7 +213,7 @@ class IBar:
 
 
 
-class IBaseDataBar(QuantConnect.Data.Market.IBar, QuantConnect.Data.IBaseData):
+class IBaseDataBar(QuantConnect.Data.IBaseData, QuantConnect.Data.Market.IBar):
     """ Represents a type that is both a bar and base data """
 
 class Tick(QuantConnect.Data.BaseData, QuantConnect.Data.IBaseData):

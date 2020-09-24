@@ -81,7 +81,7 @@ class OpenInterest(QuantConnect.Data.Market.Tick, QuantConnect.Data.IBaseData):
         pass
 
 
-class OptionChain(QuantConnect.Data.BaseData, System.Collections.IEnumerable, System.Collections.Generic.IEnumerable[OptionContract], QuantConnect.Data.IBaseData):
+class OptionChain(QuantConnect.Data.BaseData, QuantConnect.Data.IBaseData, System.Collections.IEnumerable, System.Collections.Generic.IEnumerable[OptionContract]):
     """
     Represents an entire chain of option contracts for a single underying security.
                 This type is System.Collections.Generic.IEnumerable
@@ -244,7 +244,7 @@ class OptionContracts(QuantConnect.Data.Market.DataDictionary[OptionContract], S
     Item: indexer#
 
 
-class QuoteBar(QuantConnect.Data.BaseData, QuantConnect.Data.Market.IBar, QuantConnect.Data.Market.IBaseDataBar, QuantConnect.Data.IBaseData):
+class QuoteBar(QuantConnect.Data.BaseData, QuantConnect.Data.IBaseData, QuantConnect.Data.Market.IBar, QuantConnect.Data.Market.IBaseDataBar):
     """
     QuoteBar class for second and minute resolution data:
                 An OHLC implementation of the QuantConnect BaseData class with parameters for candles.

@@ -312,7 +312,7 @@ class SecurityManager(QuantConnect.ExtendedDictionary[Security], System.Collecti
     Item: indexer#
 
 
-class SecurityPortfolioManager(QuantConnect.ExtendedDictionary[SecurityHolding], System.Collections.IEnumerable, QuantConnect.Interfaces.IExtendedDictionary[Symbol, SecurityHolding], System.Collections.Generic.ICollection[KeyValuePair[Symbol, SecurityHolding]], System.Collections.Generic.IDictionary[Symbol, SecurityHolding], QuantConnect.Securities.ISecurityProvider, System.Collections.Generic.IEnumerable[KeyValuePair[Symbol, SecurityHolding]]):
+class SecurityPortfolioManager(QuantConnect.ExtendedDictionary[SecurityHolding], System.Collections.IEnumerable, QuantConnect.Interfaces.IExtendedDictionary[Symbol, SecurityHolding], System.Collections.Generic.ICollection[KeyValuePair[Symbol, SecurityHolding]], System.Collections.Generic.IDictionary[Symbol, SecurityHolding], System.Collections.Generic.IEnumerable[KeyValuePair[Symbol, SecurityHolding]], QuantConnect.Securities.ISecurityProvider):
     """
     Portfolio manager class groups popular properties and makes them accessible through one interface.
                 It also provide indexing by the vehicle symbol to get the Security.Holding objects.
